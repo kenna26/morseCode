@@ -1,0 +1,143 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: #ffeead;
+}
+/* Title */
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    color: #ff6f69;
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
+h1 {
+    text-shadow: -4px -4px 4px rgba(225,225,225,0.2),
+                4px 4px 4px rgba(0,0,0,0.1);
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Translator Box */
+h2, label {
+    font-size: 20pt;
+    color: #ff6f69;
+    text-shadow: -1px -1px 1px rgba(225,225,225,0.2),
+                1px 1px 1px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.translator-container {
+    width: 40%;
+}
+
+.text-box {
+    border: none;
+    background-color: #ffcc5c;
+    border-radius: 15px;
+    padding: 15px;
+    flex-grow: 1;
+    box-shadow: inset -5px -5px 5px rgba(225,225,225,0.3),
+               inset 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+/*Form*/
+
+.input-text {
+    display: flex;
+    justify-content: flex-start;
+}
+
+input::placeholder, input, select, textarea, #output-text{
+    color: #ff6f69;
+    font-size: 10pt;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-button {
+    flex-grow: 1;
+    margin: 15px;
+    width: 100px;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+input, .text-box{
+    width: 500px;
+    flex-shrink: 1;
+    height: 100px;
+}
+
+input {
+    margin-top: 15px;
+    margin: 15px 0;
+}
+
+/* Buttons */
+
+.button {
+    border: none;
+    background-color: #ffeead;
+    border-radius: 15px;
+    box-shadow: -5px -5px 5px rgba(225,225,225,0.4),
+                5px 5px 5px rgba(0,0,0,0.2);
+    color: #96ceb4;
+}
+
+.button:hover {
+    transform: scale(1.1); 
+    transition: 0.3s;
+    color: #ffeead;
+    background-color: #96ceb4;
+    cursor: pointer;
+}
+
+/* Light Box */
+
+.light-container{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light {
+    background-color: #96ceb4;
+    height: 200pt;
+    width: 200pt;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: inset -5px -5px 5px rgba(225,225,225,0.3),
+               inset 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+#play-button {
+    width: 60pt;
+    height: 35pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;  
+    margin: 15px;
+}
+
+/*Button Animation*/
+
+

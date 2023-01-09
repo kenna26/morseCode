@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+        </style>
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename ='styles.css') }}">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Morse Code</h1>
+    </div>
+    <div class="content">
+        <div class="translator-container">
+            <div class ="whole-text-container">
+                <form class="input-form" action="/translate" method="post">
+                    <label for="input-text">Translator</label>
+                    <div class="form-container">
+                        <input type="text" name="input" id="input-text" class="text-box" placeholder="Input Text Goes Here...">
+                        <button type="submit"id="submit-button" class="button">Translate</button>
+                    </div>
+                </form>
+            </div>
+            <div class="whole-text-container">
+                <h2>Output Text</h2>
+                    <div class="text-container">
+                        <div id="output-text" class="text-box">
+                            {{ output }}
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="light-container">
+            <div class="light"></div>
+            <div class="audio-controls-container"></div>
+            <div id="play-button" class="button">Play</div>
+        </div>
+    </div>
+</body>
+</html>
