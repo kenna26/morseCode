@@ -1,3 +1,6 @@
+from playsound import playsound
+from time import sleep
+
 #______Properties_____
 
 morseCode = {"A" : ".-", "B": "-...", "C": "-.-.","D":"-..", "E":".", 
@@ -40,8 +43,19 @@ def translateMorse(text):
                         final += letter
     return final
         
+def blinker(text):
+    for char in text:
+        if char == ".":
+            playsound('dot.wav')
+        elif char == "-":
+            playsound("dash.wav")
+        elif char == " " or char == "/":
+            sleep(0.5)
+
+    sleep(0.5) #space between . and -
+
 
 
 #______Actual Code_____
 
-#print(translateMorse(input("Type your message (morse code or english): \n")))
+blinker(translateMorse(input("Type your message (morse code or english): \n")))
