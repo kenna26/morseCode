@@ -3,14 +3,14 @@
 }
 
 body {
-    background-color: #ffeead;
+    background-color: white;
 }
 /* Title */
 
 .page-title {
     display: flex;
     justify-content: center;
-    color: #ff6f69;
+    color: black;
     font-weight: bolder;
     font-size: 20pt;
 }
@@ -28,7 +28,7 @@ h1 {
 /* Translator Box */
 h2, label {
     font-size: 20pt;
-    color: #ff6f69;
+    color: black;
     text-shadow: -1px -1px 1px rgba(225,225,225,0.2),
                 1px 1px 1px rgba(0,0,0,0.1);
     font-weight: bold;
@@ -40,7 +40,7 @@ h2, label {
 
 .text-box {
     border: none;
-    background-color: #ffcc5c;
+    background-color: white;
     border-radius: 15px;
     padding: 15px;
     flex-grow: 1;
@@ -56,7 +56,7 @@ h2, label {
 }
 
 input::placeholder, input, select, textarea, #output-text{
-    color: #ff6f69;
+    color: black;
     font-size: 10pt;
 }
 
@@ -94,18 +94,18 @@ input {
 
 .button {
     border: none;
-    background-color: #ffeead;
+    background-color: white;
     border-radius: 15px;
     box-shadow: -5px -5px 5px rgba(225,225,225,0.4),
                 5px 5px 5px rgba(0,0,0,0.2);
-    color: #96ceb4;
+    color: black;
 }
 
 .button:hover {
     transform: scale(1.1); 
     transition: 0.3s;
-    color: #ffeead;
-    background-color: #96ceb4;
+    color: white;
+    background-color: black;
     cursor: pointer;
 }
 
@@ -119,7 +119,7 @@ input {
 }
 
 .light {
-    background-color: #96ceb4;
+    background-color: black;
     height: 200pt;
     width: 200pt;
     margin: 15px;
