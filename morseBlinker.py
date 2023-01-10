@@ -12,14 +12,14 @@ screenOff = (0, 0, 0)
 surface = pg.display.set_mode((400, 400))
 surface.fill(screenOff)
 
+
+#first value in list is always on
+
 def blinker(text):
+    blinkerList = []
     for char in text:
         if char == ".":
-            surface.fill(screenOn)
-            pg.display.update()
-            clock.tick(FPS)
-            surface.fill(screenOff)
-            pg.display.update()
+            blinkerList.append(1)
         elif char == "-":
             pg.display.update()
             surface.fill(screenOn)
@@ -40,7 +40,6 @@ FPS = 3
     
 running = True
 
-blinker(translateMorse(input("Input English:")))
 
 while running: 
     pg.display.update()
@@ -49,7 +48,7 @@ while running:
     for event in pg.event.get():
         if event.type == pg.QUIT:
             running = False
-    
+
 pg.quit()
 
 
