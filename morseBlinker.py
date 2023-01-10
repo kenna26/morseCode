@@ -4,7 +4,6 @@ from pygame import *
 import sys
 import morseCode
 from morseCode import translateMorse
-
 pg.init()
 
 screenOn = (225, 225, 225)
@@ -18,32 +17,39 @@ def blinker(text):
         if char == ".":
             surface.fill(screenOn)
             pg.display.update()
-            sleep(1)
+            clock.tick(FPS)
             surface.fill(screenOff)
             pg.display.update()
         elif char == "-":
             pg.display.update()
             surface.fill(screenOn)
-            sleep(3)
+            clock.tick(FPS)
             surface.fill(screenOff)
             pg.display.update()
         elif char == " ": #extra on top of wait at bottom
-            sleep(1)
+            clock.tick(FPS)
         elif char == "/": #extra on top of wait at bottom and from spaces around /
-            sleep(1)
+            clock.tick(FPS)
 
-        sleep(1) #space between . and -
+    clock.tick(FPS) #space between . and -
 
-        
-while True: 
-    surface.fill(screenOff)
+
+clock = pg.time.Clock()
+
+FPS = 3
+    
+running = True
+
+blinker(translateMorse(input("Input English:")))
+
+while running: 
+    pg.display.update()
+    clock.tick(FPS)
 
     for event in pg.event.get():
         if event.type == pg.QUIT:
-            pg.quit()
+            running = False
+    
+pg.quit()
 
-    english = translateMorse(input("Input Message: "))
-    #print(english)
-    #blinker(english)
-    pg.display.update()
 
