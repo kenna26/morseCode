@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
+import sys
+sys.path.insert(0, '/user/kennaschneider/Documents/morseCode.morseCode.py')
 from morseCode import translateMorse
+
 
 app = Flask(__name__)
 
