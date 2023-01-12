@@ -132,7 +132,7 @@ input {
 }
 
 #replay-button {
-    background-image: url("/Users/kennaschneider/Documents/morseCode/audioMorse/replay.png");
+    background-image: url("replay.png");
     background-size: cover;
 }
 
