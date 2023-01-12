@@ -58,4 +58,4 @@ def blinker(text):
 
 #______Actual Code_____
 
-#blinker(translateMorse(input("Type your message (morse code or english): \n")))
+#blinker(input("Type your message (morse code): \n"))

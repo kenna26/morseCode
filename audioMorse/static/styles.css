@@ -1,6 +1,5 @@
 * {
     font-family: 'DM Sans', sans-serif;
-    border: 2px dashed blue;
 }
 
 body {
@@ -105,7 +104,7 @@ input {
 .button:hover, .audio-button:hover {
     transform: scale(1.1); 
     transition: 0.3s;
-    color: white;
+    color: white; 
     background-color: black;
     cursor: pointer;
 }
