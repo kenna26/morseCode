@@ -5,6 +5,12 @@
 body {
     background-color: white;
 }
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* Title */
 
 .page-title {
@@ -80,7 +86,6 @@ input:focus {
 }
 
 input, .text-box{
-    width: 400px;
     flex-shrink: 1;
     height: 100px;
 }
@@ -127,14 +132,20 @@ input {
 }
 
 #replay-button {
-    background-image: ("images/replay.png");
+    background-image: url("/Users/kennaschneider/Documents/morseCode/audioMorse/replay.png");
+    background-size: cover;
 }
 
 #play-button {
-    background-image: ("images/play.png");
+    background-image: url("images/play.png");
 }
 
 #mute-button {
-    background-image: ("images/mute.png");
+    background-image: url("images/mute.png");
 }
 
+#test {
+    background-image: url("replay.png");
+    width: 500px;
+    height: 500px;
+}
