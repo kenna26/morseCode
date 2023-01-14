@@ -22,7 +22,7 @@
     <div class="content">
         <div class="translator-container">
             <div class ="whole-text-container">
-                <form class="input-form" action="/translate" method="post">
+                <form action="/translate" method="post">
                     <label for="input-text">Translator</label>
                     <div class="form-container">
                         <input type="text" name="input" id="input-text" class="text-box" placeholder="Input Text Goes Here...">
@@ -41,15 +41,16 @@
         </div>
 
         <div class="audio-container">
-           <h2>Audio Controls</h2>
+           <h2 id="audio-title">Audio Controls</h2>
            <div class="audio-controls">
                 <div class="audio-buttons">
-                    <div id="replay-button" class="audio-button"></div>
-                    <div id="play-button" class="audio-button"></div>
-                    <div id="mute-button" class="audio-button"></div>
+]                    <button id="replay-button" class="audio-button" name="replay" type="button"></button>
+                    <form action="/play-pause" method ="post">
+                        <button id="play-button" class="audio-button" name="play-pause" type="submit" style="background-image: ({{ path }})"></button>
+                    </form>
+                    <button id="mute-button" class="audio-button" name="mute" type="button"></button>
                 </div>
                 <div class="audio-slider">audio slider</div>
-                <div id="test"></div>
            </div>
         </div>
     </div>

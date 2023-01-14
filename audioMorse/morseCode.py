@@ -13,14 +13,15 @@ morseCode = {"A" : ".-", "B": "-...", "C": "-.-.","D":"-..", "E":".",
 
 #______METHODS_____
 
-def checkLetters(text):
+def isLetters(text):
      for element in "qwertyuiopasdfghjklzxcvbnm":
         if (element in text):
             return True
 
-def translateMorse(text):
+def translateBoth(text):
+    morse = False
     final = ""
-    if checkLetters(text): #input is english
+    if isLetters(text): #input is english
         first = True
         for letter in text:
             if not first:
@@ -32,6 +33,7 @@ def translateMorse(text):
             else:
                 final += morseCode[letter.upper()]
 
+
     else: #input is morse code
         split = text.split(" ")
         for morseLetter in split:
@@ -42,17 +44,25 @@ def translateMorse(text):
                     if morseCode[letter] == morseLetter:
                         final += letter
     return final
+
+def translateToMorse (text):
+    if (isLetters(text)): #is english
+        return translateBoth(text)
+    else:
+        return text
+    
         
 def blinker(text):
     for char in text:
         if char == ".":
-            playsound('dot.wav')
+            playsound('/static/dot.wav')
         elif char == "-":
-            playsound("dash.wav")
+            playsound("/static/dash.wav")
         elif char == " " or char == "/":
             sleep(0.5)
 
     sleep(0.5) #space between . and -
+
 
 
 
