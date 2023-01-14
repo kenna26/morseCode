@@ -1,6 +1,5 @@
 * {
     font-family: 'DM Sans', sans-serif;
-    border: 2px dashed blue;
 }
 
 body {
@@ -44,7 +43,7 @@ h2, label {
 
 .translator-container {
     width: 40%;
-    display: flex;
+    display: inline;
     align-items: top;
     justify-content: space-around;
     width: 80%;
@@ -107,8 +106,8 @@ input {
     margin: 15px 0;
 }
 
-.input-text, .output-txt {
-    font-size: 30pt;
+#input-text, #output-text, input::placeholder {
+    font-size: 15pt;
 }
 
 /* Buttons */
@@ -134,49 +133,4 @@ input {
     box-shadow: none;
     transform: translateY(0);
     transition: 0.2;
-}
-
-/* Audio Controls */
-
-.audio-container {
-    margin: 40px;
-}
-
-.audio-buttons {
-    display: flex;
-    justify-content: space-around;
-    cursor: pointer;
-}
-
-#audio-title {
-    text-align: center;
-}
-
-.audio-button:hover {
-    filter: invert(1);
-    box-shadow: -5px -5px 5px rgba(0,0,0,0.2),
-                5px 5px 5px rgba(225,225,225,0.4);
-    transform: scale(1.1); 
-    transition: 0.3s;
-}
-
-.audio-button {
-    width: 75px;
-    height: 75px;
-    margin: 10px;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#replay-button {
-    background-image: url("/images/replay.png");
-}
-
-#play-button {
-    background-image: url("/images/play.png");
-}
-
-#mute-button {
-    background-image: url("/images/mute.png");
 }

@@ -10,10 +10,14 @@ class Vars():
 
 app = Flask(__name__)
 
+@app.route("/audio", methods = ["GET", "POST"])
 @app.route("/")
 def main():
-    audioPlaying = False
-    currentMorseCode = ".... ."
+    if request.method == "POST":
+        pathList = makeBlinkerList(request.form["play"])
+        print(f'list {pathList}')
+        return render_template("main.html", pathList = pathList)
+
     return render_template("main.html")
 
 @app.route("/translate", methods = ["GET", "POST"])
@@ -26,14 +30,22 @@ def translate():
     else:
         return render_template("main.html")
 
-#Play and Pause controls
-@app.route("/play-pause", methods =["GET", "POST"])
-def playPause():
-    if not Vars.audioPlaying: #nothing is currently playing 
-        Vars.audioPlaying = True
-        print(f"now playing: {Vars.currentMorseCode}")
-        blinker(Vars.currentMorseCode)
-    return render_template("main.html")
+
+#________________________
+#     Methods and Shit
+#_________________________
+
+def makeBlinkerList(text):
+    final = []
+    
+    for char in text:
+        if char == ".":
+            final.append("{{ url_for('static', filename ='dot.wav') }}")
+        elif char == "-":
+            final.append("{{ url_for('static', filename ='dash.wav') }}")
+        elif char == " ":
+            final.append("{{ url_for('static', filename ='silence.wav') }}")
+    return final
 
 
 if __name__ == "__main__":

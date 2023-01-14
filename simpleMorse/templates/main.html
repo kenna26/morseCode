@@ -42,21 +42,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="audio-container">
-            <h2 id="audio-title">Audio Controls</h2>
-            <audio autoplay>
-                {% for path in pathList %}
-                <source src="{{ path }}" type="audio/wav">
-                Your Browser Doesn't Support My Audio Element
-                {% endfor %}
-            </audio>
-            <form action="/audio" method="post">
-                <input type="text" name="play">
-                <button type="submit">Play</button>
-            </form>
-        </div>
-    </div>
 </body>
 
 </html>
